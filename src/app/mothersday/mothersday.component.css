@@ -1,0 +1,9 @@
+.card-img-top{
+    height: 300px;  
+}
+.card{
+    height: 350px;
+    background-color: ghostwhite;
+    border: none;
+    text-align: center;
+}

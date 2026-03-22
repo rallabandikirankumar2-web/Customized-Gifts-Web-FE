@@ -1,0 +1,11 @@
+.form-control{
+ margin-top: 20px;
+ padding: 20px;
+}
+.btn {
+    margin-top: 15px;
+    width: 300px;
+    margin-left: 60px;
+    font-family: sans-serif;
+    background-color: rgb(149, 37, 82);
+}

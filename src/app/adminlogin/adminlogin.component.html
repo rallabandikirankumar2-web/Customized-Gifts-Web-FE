@@ -1,0 +1,30 @@
+<div style="padding-left:480px;padding-top: 50px; ">
+    <div style="height: 400px; width: 500px;background-color: ghostwhite;padding: 50px; border-radius: 20px;border: none;">
+     
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" novalidate>
+    
+        <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInputGroup1" placeholder="EmailId" ngModel required name="emailId" #emailId="ngModel" >
+              <label for="floatingInputGroup1"style="font-family:sans-serif;">EmailId</label>
+              <div class="text-danger " style="font-family: sans-serif;">
+                <div *ngIf="emailId.errors?.['required'] && emailId.touched">Email is required</div>
+            </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingInputGroup1" placeholder="Password" ngModel required name="password" #password="ngModel">
+              <label for="floatingInputGroup1" style="font-family:sans-serif;">Password</label>
+              <div class="text-danger " style="font-family: sans-serif;">
+                <div *ngIf="password.errors?.['required'] && password.touched">Password is required</div> 
+            </div>
+            </div>
+          </div>
+          <button [disabled]="loginForm.invalid" type="submit" class="btn btn" style="width: 400px;height: 50px; font-size: 20px;font-family: sans-serif;background-color: rgb(149, 37, 82);" >Login</button>
+          </form>
+          
+    </div>
+    </div>

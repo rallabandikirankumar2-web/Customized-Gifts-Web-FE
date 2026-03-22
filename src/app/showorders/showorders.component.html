@@ -1,0 +1,37 @@
+<div class="container" >
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive" >
+                <thead>
+                    <tr >
+                        <th style="padding-right: 110px;">UserID</th>
+                        <th style="padding-right: 110px;">Product ID</th>
+                        <th style="padding-right: 110px;">Product Name</th>
+                        <th style="padding-right: 110px;">Product Image</th>
+                        <th style="padding-right: 110px;">Price</th>
+                        <th style="padding-right: 110px;">Quantity</th>
+                        <th style="padding-right: 110px;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products">
+                        <td>{{User_Id}}</td>
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td><img src="{{item.imgsrc}}" style="width: 150px;height: 150px;" ></td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.total}}</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="font-family: sans-serif;text-align: center;margin-top: 50px;">
+    <button type="button" class="btn btn-success" (click)="back()">Back</button>
+
+</div>

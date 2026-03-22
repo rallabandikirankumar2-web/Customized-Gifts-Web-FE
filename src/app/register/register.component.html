@@ -1,0 +1,80 @@
+
+<form #regFrom="ngForm" (ngSubmit)="userRegistration(regFrom.value)" >
+<div class="conatiner d-flex" style="justify-content: center;align-items: center;height: 600px;margin-top: 120px; " >
+    <div style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding: 30px;border-radius: 20px;">
+      <h1 class="LF" style="text-align: center;font-family:sans-serif;font-weight: bold;color: rgb(149, 37, 82);">Join Us</h1>
+     
+      
+    <input type="text" class="form-control" size="45px"  placeholder="FirstName" style="font-family: sans-serif;" ngModel required name="firstName"  #firstName="ngModel" pattern="^[a-zA-z]+$" maxlength="25" />
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="firstName.errors?.['required'] && firstName.touched">Firstname is required.</div>
+      <div *ngIf="firstName.errors?.['pattern']">Please enter only alphabetic characters.</div>
+      <div *ngIf="firstName.errors?.['maxlength'] && firstName.touched">Please enter max 15 characters.</div>
+  </div>
+   
+    
+    <input type="text" class="form-control" size="45px"  placeholder="LastName"style="font-family: sans-serif;" ngModel required name="lastName"   #lastName="ngModel" pattern="^[a-zA-z]+$" maxlength="25"   />
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="lastName.errors?.['required'] && lastName.touched">Lastname is required.</div>
+      <div *ngIf="lastName.errors?.['pattern']">Please enter only alphabetic characters.</div>
+      <div *ngIf="lastName.errors?.['maxlength'] && lastName.touched">Please enter max 15 characters.</div>
+    </div>
+  
+
+
+    
+    <input type="text" class="form-control" size="45px"  placeholder="MobileNumber"style="font-family: sans-serif;" ngModel required name="mobileNumber"  #mobileNumber="ngModel" pattern="^[9|8|6|7]\d{9}$"    />
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="mobileNumber.errors?.['required'] && mobileNumber.touched">Mobilenumber is required</div>
+      <div *ngIf="mobileNumber.errors?.['maxlength'] && mobileNumber.touched">Please enter 10 digits</div>
+      <div *ngIf="mobileNumber.errors?.['minlength'] && mobileNumber.touched">Please enter 10 digits</div>
+      <div *ngIf="mobileNumber.errors?.['pattern']">Please Enter a Valid 10 Digit MobileNumber </div>
+  </div>
+  
+
+<div style="padding: 5px;">
+  <span class="DOB" style="color: rgb(65, 63, 63);margin-top: 30px;float: left;font-family: sans-serif; " > Gender: &nbsp;</span>
+
+    <select class="form-select" aria-label="Default select example" ngModel name="gender" required #gender="ngModel" style="width: 200px; margin-left: 50px;margin-top: 20px; font-family: sans-serif;"  >
+      <option value=""> Select Gender </option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Others">Others</option>
+    </select>
+  </div>
+  <div class="text-danger " style="font-family: sans-serif;">
+    <div *ngIf="gender.errors?.['required'] && gender.touched">Gender is required.</div>
+    <div *ngIf="gender.errors?.['maxlength'] && gender.touched">Please Select Gender.</div>
+  </div>
+
+    <span class="DOB" style="color: rgb(65, 63, 63);margin-top: 30px;float: left;font-family: sans-serif;margin-left: 10px; " >DOB:</span>
+    <input type="date" class="form-control"   placeholder="Enter Your DOB" style="float: inline-end;width: 200px;margin-left: 70px; font-family:sans-serif;" ngModel required name="dob"  #dob="ngModel"  />
+
+    <input type="text" class="form-control" size="45px"  placeholder="Address"style="font-family: sans-serif;" ngModel required name="address" pattern="^[a-zA-Z]*$" #address="ngModel"  />
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="address.errors?.['required'] && address.touched">Address is required.</div>
+    </div>
+    <input type="text" class="form-control" size="45px"  placeholder="EmailId"style="font-family: sans-serif;" ngModel required name="emailId" #emailId="ngModel" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'/>
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="emailId.errors?.['required'] && emailId.touched">Email is required</div>
+      <div *ngIf="emailId.errors?.['pattern']">Enter a Valid MailId</div>
+  </div>
+    <input type="password" class="form-control" size="45px"  placeholder="Password"style="font-family: sans-serif;" ngModel required name="password"  #password="ngModel" 
+     pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'  minlength="8" />
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="password.errors?.['required'] && password.touched">Password is required</div>
+      <div *ngIf="password.errors?.['pattern']">Enter Strong Password</div> 
+  </div>
+    <input type="password" class="form-control" size="45px"  placeholder="confirmpassword"style="font-family: sans-serif;" ngModel required name="confirmpassword"  #confirmpassword="ngModel" />
+    <div class="text-danger " style="font-family: sans-serif;">
+      <div *ngIf="confirmpassword.touched && confirmpassword.errors?.['required']">Confirm password is required</div>
+      <div *ngIf="confirmpassword.touched  && password.value!==confirmpassword.value">Password and Confirmpassword should be same</div> 
+  </div >
+    <button  type="submit" [disabled]="regFrom.invalid"  class="btn btn"   style="margin-top: 15px;width: 300px;margin-left: 60px;font-family: sans-serif;background-color: rgb(149, 37, 82);" >Register</button>
+ <p style="color: rgb(149, 37, 82) ; text-align: center;margin-top: 10px;">Already have an Acoount?
+    <a routerLink="/login" style="text-decoration: none;color: rgb(149, 37, 82) ;">Login</a>
+  </p>
+    </div>
+</div>
+
+</form>

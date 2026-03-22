@@ -1,0 +1,92 @@
+<!-- nav-1 -->
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:rgb(149, 37, 82);" >
+    <div class="container-fluid" style="font-family: sans-serif;" >
+      <a class="navbar-brand"[class.disabled]="loginStatus" routerLink="home">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto" >
+          <li class="nav-item">
+            <a class="nav-link" routerLink="adminlogin" [class.disabled]="loginStatus" *ngIf="!loginStatus" > Admin </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[class.disabled]="loginStatus" routerLink="login"  *ngIf="!loginStatus"> Login </a>
+          </li>
+          <li class="nav-item">
+           <img src="assets/Images/l4.png" alt="img" style="width: 40px; height: 40px;">
+          </li>
+          <form class="d-flex" style="padding-left: 200px;">
+            <input class="form-control me-sm-2" type="search" placeholder="Search for Products" style="margin-top: 5px;width: 650px;">
+            <button class="btn  my-2 my-sm-0" type="submit" fdprocessedid="a6tvuf" style="width: 100px;height: 42px; background-color: ghostwhite;">Search</button>
+          </form>
+          
+        </ul>
+        <form class="d-flex">
+            <ul class="navbar-nav me-auto" *ngIf="loginStatus" >
+              <li class="nav-item">
+                <a class="nav-link"[class.disabled]="!loginStatus" routerLink="cart"><i class="fa-sharp fa-solid fa-cart-shopping" ></i>
+                <div style="font-size: 10px;" [class.disabled]="!loginStatus" class="badge bg-danger" >
+                  {{totalitem}}
+                </div>
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [class.disabled]="!loginStatus" routerLink="profile"><i class="fa-solid fa-user"></i></a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.disabled]="!loginStatus" routerLink="logout">Logout</a>
+                </li>
+                
+            </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- nav-2 -->
+
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:ghostwhite;padding-left: 300px;font-family:sans-serif;">
+  <div class="container-fluid" >
+    
+    <div class="collapse navbar-collapse" id="navbarColor03" >
+      <ul class="navbar-nav me-auto" >
+        <li class="nav-item1">
+          <a class="nav-link "routerLink="/bdaygifts">Birthday Gifts</a>
+        </li>
+        <li class="nav-item1">
+          <a class="nav-link" routerLink="/wedding">Wedding/Anniversary Gifts</a>
+        </li>
+        <li class="nav-item1">
+          <a class="nav-link" routerLink="/couples">For couples</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: -5px;" >Occasion</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/forher">For Her</a>
+            <a class="dropdown-item" routerLink="/forhim">For Him</a>
+            <a class="dropdown-item" routerLink="/valentines">Valentine's Day</a>
+            <a class="dropdown-item" routerLink="/ornaments">Ornaments</a>
+            <a class="dropdown-item" routerLink="/mothersday">Mother's Day</a>
+            <a class="dropdown-item" routerLink="/rakhi">Rakhi</a>
+            <a class="dropdown-item" routerLink="/homedecors">House Warming</a>
+            
+           
+          </div>
+        </li>
+        <li class="nav-item1">
+          <a class="nav-link" routerLink="/homedecors">Home Decors</a>
+        </li>
+        <li class="nav-item1">
+          <a class="nav-link" routerLink="/aboutus" >AboutUs</a>
+        </li>
+
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<!-- ......... -->

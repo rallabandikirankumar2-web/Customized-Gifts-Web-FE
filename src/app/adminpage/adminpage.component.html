@@ -1,0 +1,48 @@
+
+<h3 style="font-family:sans-serif ;text-align: center;margin-top: 40px;margin-bottom: 60px;">Registered Users</h3>
+
+<div class="container" >
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive" >
+                <thead>
+                    <tr >
+                        <th style="padding-right: 110px;">userID</th>
+                        <th style="padding-right: 110px;">firstName</th>
+                        <th style="padding-right: 110px;">lastName</th>
+                        <th style="padding-right: 110px;">emailId</th>
+                        <th style="padding-right: 110px;">password</th>
+                        <th style="padding-right: 110px;">address</th>
+                        <th style="padding-right: 110px;">dob</th>
+                        <th style="padding-right: 110px;">gender</th>
+                        <th style="padding-right: 110px;">mobileNumber</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.userId}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.emailId}}</td>
+                        <td>{{user.password}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.dob}}</td>
+                        <td>{{user.gender}}</td>
+                        <td>{{user.mobileNumber}}</td>
+
+
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div style="font-family: sans-serif;text-align: center;margin-top: 50px;">
+    <button type="button" class="btn btn-success" (click)="orders()">Show Orders</button>
+
+</div>
+

@@ -1,0 +1,94 @@
+<div class="container" style="font-family: sans-serif;"><br><br> 
+    <div class="modal fade" id="userModel">
+      <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 20px
+        ;">
+          <div class="modal-header"style="margin-left:160px" >
+            <!-- <span class="close" data-dismiss="modal" >&times;</span> -->
+            <h4 class="modal-title" >Edit Details</h4>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif;">
+            <form class="form-group">
+               UserId: <input type="number" name="userId" [(ngModel)]="editObject.userId" class="form-control" readonly><br />
+               FirstName: <input type="text" name="firstName" [(ngModel)]="editObject.firstName"
+                class="form-control"><br />
+               LastName: <input type="text" name="lastName" [(ngModel)]="editObject.lastName"
+                class="form-control"><br />
+               MobileNumber: <input type="text" name="mobileNumber" [(ngModel)]="editObject.mobileNumber"
+                class="form-control"><br />
+               Gender: 
+               <!-- <input type="text" name="gender" [(ngModel)]="editObject.gender"class="form-control"> -->
+               <select name="gender" name="gender"[(ngModel)]="editObject.gender" class="form-control">
+                <option value=""> Select Gender </option>
+                <option value="Male"> Male </option>
+                <option value="Female"> Female </option>
+                <option value="Other"> Other </option>
+            </select>
+                <br />
+               Dob: <input type="date" name="dob" [(ngModel)]="editObject.dob"
+                class="form-control"><br />
+               Address: <input type="text" name="address" [(ngModel)]="editObject.address"
+                class="form-control"><br />
+               EmailId: <input type="text" name="emailId" [(ngModel)]="editObject.emailId" class="form-control"><br />
+               Password: <input type="password" name="password" [(ngModel)]="editObject.password"
+                class="form-control"><br />
+              <!-- Enter Contact No: <input type="number" name="contactNo" [(ngModel)]="editObject.contactNo"
+                class="form-control"><br /> -->
+            </form>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" (click)="updateUser()" data-dismiss="modal" style="text-align: center;background-color:rgb(149, 37, 82);color: white;margin-right: 200px;height: 35px;width: 100px;border-radius: 5px;">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <section class="vh-100" style="background-color: #f4f5f7; width: auto; font-family: sans-serif;">
+      <div class="container py-5 h-100" >
+        <div class="row d-flex justify-content-center align-items-center h-100" style="margin-top: -100px;">
+          <div class="col col-lg-6 mb-4 mb-lg-0" style="height: 300px; width: 1000px;">
+            <div class="card mb-3" style="border-radius: .5rem;">
+              <div class="row g-0">
+                <div class="col-md-4 gradient-custom text-center text-white"
+                  style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; font-size: large; height: 330px;">
+                  <img src="assets/Images/l4.png" alt="Avatar" class="img-fluid my-5"
+                    style="width: 80px;" />
+                  <h5>{{user.firstName}} {{user.lastName}}</h5>
+                  <p>{{user.emailId}}</p>
+                  <!-- <i class="far fa-edit mb-5"></i> -->
+                </div>
+                <div class="col-md-8" style="height: 330px; font-weight: 800;">
+                  <div class="card-body p-4">
+                    <h6 style="margin-left: 205px; font-weight: bold;">Details</h6>
+                    <hr class="mt-0 mb-4" >
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Address: {{user.address}}</h6>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>MobileNumber: {{user.mobileNumber}}</h6>
+                      </div>
+                    </div>
+                    <hr class="mt-0 mb-4">
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Gender: {{user.gender}}</h6>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>DOB: {{user.dob}}</h6>
+                      </div>
+                      <br><br><br><br><br>
+                      <div style="margin: auto;margin-top: -20px;" align="justify-content-center">
+                        <button type="button" style="margin-left: 200px;background-color:rgb(149, 37, 82);color: white;height: 35px;width: 100px;border-radius: 5px;"
+                          (click)="showEditPopup(user)">Update</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

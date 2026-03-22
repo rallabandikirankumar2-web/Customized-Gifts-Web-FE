@@ -1,0 +1,298 @@
+<h1 style="font-size: 34px; font-weight: bold;text-align: center; margin-top: 20px;font-family: sans-serif;">Valentine's Day</h1>
+<hr style="width: 50%;margin: 0 auto;">
+
+
+<div class="row row-cols-1 row-cols-md-4" style="margin-top: 60px;">
+  <div class="ng-container" *ngFor="let product of products">
+   <div class="col mb-4">
+        <div class="card h-100">
+          <img src="{{product.imgsrc}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">Price: ₹ {{product.price}}</p>
+            <button type="button" class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/n20.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">String Frame</h5>
+          <p class="card-text">Price: 499/-</p>
+        </div>
+      </div>
+    </div>
+   </a>
+   <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/n21.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">String Frame</h5>
+          <p class="card-text">Price: 499/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/n24.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">String Frame</h5>
+          <p class="card-text">Price: 499/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+  
+  <div class="row row-cols-1 row-cols-md-4" style="margin-top: 20px;">
+    <a href="" style="text-decoration: none;color: black;"><div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c81.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Wine Glasses</h5>
+          <p class="card-text">Price: 499/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c82.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Herat Cusion</h5>
+          <p class="card-text">Price: 599/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="assets/Images/c83.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Name Frame</h5>
+              <p class="card-text">Price: 599/-</p>
+            </div>
+          </div>
+        </div>
+        </a>
+    <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c84.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LED Globe</h5>
+          <p class="card-text">Price: 799/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+  
+  <div class="row row-cols-1 row-cols-md-4" style="margin-top: 20px;">
+    <a href="" style="text-decoration: none;color: black;"><div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c85.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LED Globe</h5>
+          <p class="card-text">Price: 799/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c86.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LEd Globe</h5>
+          <p class="card-text">Price: 799/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="assets/Images/c87.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">String Art</h5>
+              <p class="card-text">Price: 499/-</p>
+            </div>
+          </div>
+        </div>
+        </a>
+    <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c59.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Lighting photo Collection</h5>
+          <p class="card-text">Price: 399/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="assets/Images/c92.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Family Tree Frame</h5>
+              <p class="card-text">Price: 799/-</p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <a href="" style="text-decoration: none;color: black;">
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/Images/c93.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Wooden Carving Combo</h5>
+                  <p class="card-text">Price: 999/-</p>
+                </div>
+              </div>
+            </div>
+            </a>
+    
+<a href="" style="text-decoration: none;color: black;">
+                <div class="col mb-4">
+                  <div class="card h-100">
+                    <img src="assets/Images/c95.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Wooden Carving</h5>
+                      <p class="card-text">Price: 499/-</p>
+                    </div>
+                  </div>
+ </div>
+ </a>
+ <a href="" style="text-decoration: none;color: black;">
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/Images/c97.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LED Photo Frame</h5>
+          <p class="card-text">Price: 699/-</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a href="" style="text-decoration: none;color: black;"><div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c98.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Calender</h5>
+            <p class="card-text">Price: 299/-</p>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none;color: black;">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c99.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pocket Diary</h5>
+            <p class="card-text">Price: 299/-</p>
+          </div>
+        </div>
+      </div>
+     </a>
+     <a href="" style="text-decoration: none;color: black;">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c100.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pocket Diary</h5>
+            <p class="card-text">Price: 299/-</p>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none;color: black;">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c101.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pocket Diary</h5>
+            <p class="card-text">Price: 299/-</p>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none;color: black;"><div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c102.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Flask Combo</h5>
+            <p class="card-text">Price: 599/-</p>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none;color: black;">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c103.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Flask Combo</h5>
+            <p class="card-text">Price: 599/-</p>
+          </div>
+        </div>
+      </div>
+     </a>
+     <a href="" style="text-decoration: none;color: black;">
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/Images/c104.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Couple Combo</h5>
+            <p class="card-text">Price: 499/-</p>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none;color: black;">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="assets/Images/c105.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Couple Combo</h5>
+              <p class="card-text">Price: 499/-</p>
+            </div>
+          </div>
+        </div>
+</a>
+<a href="" style="text-decoration: none;color: black;">
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="assets/Images/c106.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Wallet</h5>
+        <p class="card-text">Price: 299/-</p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="" style="text-decoration: none;color: black;">
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="assets/Images/c107.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">LED Frame</h5>
+        <p class="card-text">Price: 699/-</p>
+      </div>
+    </div>
+  </div>
+</a> -->
